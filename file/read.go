@@ -5,10 +5,6 @@ import (
 	"strings"
 )
 
-type User struct {
-	Email, Password string
-}
-
 func check(e error) {
 	if e != nil {
 		panic(e)
@@ -18,10 +14,8 @@ func check(e error) {
 func ReadFromFile() []User {
 	dat, err := ioutil.ReadFile("../emails_new.txt")
 	check(err)
-	// fmt.Println(string(dat))
 
 	emails := strings.Split(string(dat), "\n")
-	// fmt.Println(emails)
 
 	users := []User{}
 	for _, email := range emails {

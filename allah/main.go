@@ -7,5 +7,7 @@ import (
 )
 
 func main() {
-	log.Println(load.ReadFromFile())
+	for _, user := range load.ReadFromFile() {
+		log.Println(user)
+	}
 }
