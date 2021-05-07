@@ -16,7 +16,7 @@ func check(e error) {
 }
 
 func LoadFromFile() []User {
-	dat, err := ioutil.ReadFile("emails.txt")
+	dat, err := ioutil.ReadFile("./emails.txt")
 	check(err)
 	// fmt.Println(string(dat))
 
