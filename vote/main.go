@@ -9,12 +9,12 @@ import (
 
 func main() {
 
-	// create a new collector
-	c := colly.NewCollector()
-
 	for _, user := range load.ReadFromFile() {
 		email := user.Email
 		password := user.Password
+
+		// create a new collector
+		c := colly.NewCollector()
 
 		// login
 		log.Println("trying to login")

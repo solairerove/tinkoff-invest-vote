@@ -10,12 +10,12 @@ import (
 func main() {
 	log.Println("trying to registrate new emails")
 
-	// create a new collector
-	c := colly.NewCollector()
-
 	for _, user := range load.ReadFromFile() {
 		email := user.Email
 		password := user.Password
+
+		// create a new collector
+		c := colly.NewCollector()
 
 		err := c.Post("https://invest-terminal.useresponse.com/registration",
 			map[string]string{
