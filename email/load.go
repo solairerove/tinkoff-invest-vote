@@ -1,10 +1,13 @@
-package main
+package email
 
 import (
-	"fmt"
 	"io/ioutil"
 	"strings"
 )
+
+type User struct {
+	email, password string
+}
 
 func check(e error) {
 	if e != nil {
@@ -12,9 +15,7 @@ func check(e error) {
 	}
 }
 
-func main() {
-	fmt.Println("hello from read")
-
+func LoadFromFile() []User {
 	dat, err := ioutil.ReadFile("emails.txt")
 	check(err)
 	// fmt.Println(string(dat))
@@ -22,8 +23,10 @@ func main() {
 	emails := strings.Split(string(dat), "\n")
 	// fmt.Println(emails)
 
+	users := []User{}
 	for _, email := range emails {
-		fmt.Println("email - " + email)
-		fmt.Println("password - " + strings.Split(email, "@")[0])
+		users = append(users, User{email, strings.Split(email, "@")[0]})
 	}
+
+	return users
 }
