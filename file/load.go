@@ -1,4 +1,4 @@
-package email
+package file
 
 import (
 	"io/ioutil"

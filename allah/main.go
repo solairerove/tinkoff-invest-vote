@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	load "github.com/solairerove/tinkoff-invest-vote/email"
+	load "github.com/solairerove/tinkoff-invest-vote/file"
 )
 
 func main() {

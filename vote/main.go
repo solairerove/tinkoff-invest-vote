@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/gocolly/colly"
-	load "github.com/solairerove/tinkoff-invest-vote/email"
+	load "github.com/solairerove/tinkoff-invest-vote/file"
 )
 
 func main() {
