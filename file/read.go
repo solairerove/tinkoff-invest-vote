@@ -2,7 +2,14 @@ package file
 
 import (
 	"io/ioutil"
+	"path/filepath"
+	"runtime"
 	"strings"
+)
+
+var (
+	_, b, _, _ = runtime.Caller(0)
+	basepath   = filepath.Dir(b)
 )
 
 func check(e error) {
@@ -12,7 +19,7 @@ func check(e error) {
 }
 
 func ReadFromFile() []User {
-	dat, err := ioutil.ReadFile("../emails_new.txt")
+	dat, err := ioutil.ReadFile(basepath + "/emails_new.txt")
 	check(err)
 
 	emails := strings.Split(string(dat), "\n")
