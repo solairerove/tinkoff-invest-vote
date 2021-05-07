@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func ReadFromFile() []User {
+func WriteIntoFile(e *[]User) {
 	dat, err := ioutil.ReadFile(Basepath + "/emails_new.txt")
 	Check(err)
 
@@ -15,6 +15,4 @@ func ReadFromFile() []User {
 	for _, email := range emails {
 		users = append(users, User{email, strings.Split(email, "@")[0]})
 	}
-
-	return users
 }
