@@ -6,7 +6,7 @@ import (
 )
 
 type User struct {
-	email, password string
+	Email, Password string
 }
 
 func check(e error) {
@@ -16,7 +16,7 @@ func check(e error) {
 }
 
 func LoadFromFile() []User {
-	dat, err := ioutil.ReadFile("./emails.txt")
+	dat, err := ioutil.ReadFile("../emails_new.txt")
 	check(err)
 	// fmt.Println(string(dat))
 
