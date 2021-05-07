@@ -13,7 +13,7 @@ func main() {
 	// create a new collector
 	c := colly.NewCollector()
 
-	for _, user := range load.LoadFromFile() {
+	for _, user := range load.ReadFromFile() {
 		email := user.Email
 		password := user.Password
 

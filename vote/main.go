@@ -26,7 +26,7 @@ func main() {
 	// 	log.Fatal(err)
 	// }
 
-	for _, user := range load.LoadFromFile() {
+	for _, user := range load.ReadFromFile() {
 		email := user.Email
 		password := user.Password
 

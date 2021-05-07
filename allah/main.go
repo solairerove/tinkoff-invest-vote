@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	log.Println(load.LoadFromFile())
+	log.Println(load.ReadFromFile())
 }
