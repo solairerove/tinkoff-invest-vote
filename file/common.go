@@ -7,7 +7,8 @@ import (
 
 var (
 	_, b, _, _ = runtime.Caller(0)
-	Basepath   = filepath.Dir(b)
+	basepath   = filepath.Dir(b)
+	file       = basepath + "/emails_new.txt"
 )
 
 func Check(e error) {

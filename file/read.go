@@ -6,7 +6,7 @@ import (
 )
 
 func ReadFromFile() []User {
-	dat, err := ioutil.ReadFile(Basepath + "/emails_new.txt")
+	dat, err := ioutil.ReadFile(file)
 	Check(err)
 
 	emails := strings.Split(string(dat), "\n")
