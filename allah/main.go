@@ -11,6 +11,6 @@ func main() {
 		log.Println(user)
 	}
 
-	emails := []string{"cikecac613@goqoez.com", "morris.1@mentornkc.com"}
-	file.WriteIntoFile(emails)
+	// emails := []string{"cikecac613@goqoez.com", "morris.1@mentornkc.com"}
+	// file.WriteIntoFile(emails)
 }
